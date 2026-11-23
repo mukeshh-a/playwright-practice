@@ -20,7 +20,7 @@ test('POST a new post', async ({ request }) => {
     },
   });
 
-  expect(response.status()).toBe(200);
+  expect(response.status()).toBe(201);
   const body = await response.json();
   expect(body.title).toBe('Practice API testing');
   expect(body).toHaveProperty('id');
